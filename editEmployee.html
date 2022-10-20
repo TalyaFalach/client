@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light text-dark container">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="userTitle" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     <li class="nav-item">
+          <a class="nav-link" href="employees.html">Employees</a>
+        </li>        
+      <li class="nav-item">
+          <a class="nav-link" href="users.html">Users</a>
+        </li>    
+        <li class="nav-item">
+          <a class="nav-link" href="departments.html">Departments</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="shifts.html">Shifts</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger" onclick="logOut()" href="#">Log-out</button>
+        </li>              
+    </div>
+  </div>
+</nav>
+    <h1 id="" class="h4 text-center mt-3 container">Edit Employee</h1>
+
+    <!--!form  -->
+    <form class="container h-25">
+      <!-- first name -->
+      <div class="mb-3">
+        <label for="firstName" class="form-label h6">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <!-- last name -->
+      <div class="mb-2">
+        <label for="lastName" class="form-label h6 h6">last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <!-- employee id -->
+      <div class="mb-2">
+        <label for="employeeId" class="form-label h6">Employee ID</label>
+        <input
+          type="number"
+          class="form-control"
+          id="employeeId"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <!-- start work year -->
+      <div class="mb-2">
+        <label for="startWorkYear" class="form-label h6">Start Work Year</label>
+        <input
+          type="number"
+          class="form-control"
+          id="startWorkYear"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <!-- department id -->
+      <div class="mb-2">
+        <label for="departmentId" class="form-label h6">Department ID</label>
+        <input
+          type="number"
+          class="form-control"
+          id="departmentId"
+          aria-describedby=""
+        />
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="editEmployee()">
+        Update
+      </button>
+      <button type="button" class="btn btn-danger" onclick="deleteEmployee()">
+        Delete 
+      </button>
+      <div class="text-center h4 h-25">All Shifts</div>
+    </form>
+    <table class="container table-bordered table mb-3 table-striped" >
+      <thead class="table-primary"><tr class="bg-info">
+        <td class=" h5">date</td>
+        <td class=" h5">start</td>
+        <td class=" h5">end</td>
+      </tr></thead>
+      
+      <tbody id="shifts_table" class="border-4"></tbody>
+      
+    </table>
+
+    <div class="text-center h4 h-25">Shifts To Connect</div>
+    <table class="container table-bordered table mb-3 table-striped" >
+      <thead class="table-primary"><tr class="">
+        <td class=" h5">Shift id</td>
+        <td class=" h5">date</td>
+        <td class=" h5">start</td>
+        <td class=" h5">end</td>
+        <td class=" h5"></td>
+      </tr></thead>
+      
+      <tbody id="shifts_to_connect"></tbody>
+
+      <tbody id="shifts_table" class="border-4"></tbody>
+      
+    </table>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/editEmployee.js"></script>
+  </body>
+</html>

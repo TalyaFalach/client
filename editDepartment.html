@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg bg-light text-dark container">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="userTitle" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+     <li class="nav-item">
+          <a class="nav-link" href="employees.html">Employees</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="departments.html">Departments</a>
+        </li>      
+      <li class="nav-item">
+          <a class="nav-link" href="users.html">Users</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="shifts.html">Shifts</a>
+        </li>    
+        <li class="nav-item">
+          <button class="btn btn-danger" onclick="logOut()" href="#">Log-out</button>
+        </li>              
+    </div>
+  </div>
+</nav>
+    <h1 id="userTitle" class="display-6 mx-auto container mt-3"></h1>
+    <h1 id="" class="display-6 mx-auto container mt-3">Edit Department:</h1>
+    <!--!form  -->
+    <form class="container">
+      <!-- department name -->
+      <div class="mb-3">
+        <label for="departmentName" class="form-label">Department Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="departmentName"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <!-- department id -->
+      <div class="mb-3">
+        <label for="departmentId" class="form-label">Department ID</label>
+        <input
+          type="number"
+          class="form-control"
+          id="departmentId"
+          aria-describedby=""
+        />
+      </div>
+
+      <!-- employee id -->
+      <div class="mb-3">
+        <label for="employeeId" class="form-label">Employee ID</label>
+        <input
+          type="number"
+          class="form-control"
+          id="employeeId"
+          aria-describedby="emailHelp"
+        />
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="editDepartment()">
+        Edit Department
+      </button>
+    </form>
+     <h1 id="" class="display-6 mx-auto container mt-3 text-center">Add Employee  </h1>
+
+     <table id="" class=" table table-bordered table-striped container">
+      <thead class="table-primary text-dark h5">
+        <tr>
+          <td>Name</td>
+          <td>Department</td>
+          <td>Employee Id</td>
+          <td></td>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+     </table>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/editDepartment.js"></script>
+  </body>
+</html>

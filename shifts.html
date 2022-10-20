@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-light text-dark container">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="userTitle" href="#" class></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="employees.html">Employees</a>
+        </li>        
+      <li class="nav-item">
+          <a class="nav-link" href="users.html">Users</a>
+        </li>
+      <li class="nav-item">
+          <a class="nav-link" href="departments.html">Departments</a>
+        </li>
+      <li class="nav-item">
+          <a class="nav-link" href="shifts.html">Shifts</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger" onclick="logOut()" href="#">Log-out</button>
+        </li>
+        </div>
+      </div>
+    </nav>
+    <h1 id="userTitle" class="display-6 mx-auto container mt-3"></h1>
+
+    <h5 class="h5 text-center">All Shifts</h5>
+    <table class="container table table-bordered table-striped h-25">
+      <thead class="table-primary">
+        <tr>
+          <td>ID</td>
+          <td>Date</td>
+          <td>Employees</td>
+          <td>Start</td>
+          <td>End</td>
+         
+          
+        </tr>
+        <tbody id="tbody"></tbody>
+      </thead>
+    </table>
+
+    <div class="container shadow rounded border border-dark mx-auto p-4 mt-3 mb-3">
+      <h5 class="h5 text-center mt-4 mb-5">Connect Employee To Shift</h5>
+      <div class="border-1 mx-auto"><label for="">Employee id:</label>
+      <input type="number" class="input" name="" id="emp_id">
+      
+      <label for="">Shift id:</label>
+      <input type="number" class="input" name="" id="shift_id_to_add">
+      <button class="btn btn-success" onclick="add_employee_to_shift()">add</button></div>
+      
+
+    </div>
+
+      <div class="container shadow rounded border border-dark mx-auto p-4 mb-4 mt-5">
+      <h5 class="h5 text-center mt-4 mb-5">Delete Employee From Shift</h5>
+      <div class="mx-auto"><label for="">Employee id:</label>
+      <input type="number" class="input" name="" id="emp_id_to_delete">
+      
+      <label for="">Shift id:</label>
+      <input type="number" class="input" name="" id="shift_id_to_delete">
+      <button class="btn btn-danger m-1" onclick="delete_employee_from_shift()">Delete</button></div>
+      
+
+    </div>
+<h5 class="h5 text-center">Create New Shift</h5>
+
+     <!--!form  -->
+    <form class="container ">
+      <!--  shift_id -->
+  <div class="mb-3">
+    <label for="shift_id" class="form-label">Shift ID:</label>
+    <input type="number" class="form-control" id="shift_id" aria-describedby="emailHelp">
+    </div>
+   
+    <!-- date -->
+    <div class="mb-3">
+    <label for="date" class="form-label">date</label>
+    <input type="text" class="form-control" id="date" aria-describedby="emailHelp">
+    </div>
+    
+    <!-- start_hour -->
+    <div class="mb-3">
+    <label for="start_hour" class="form-label">start_hour</label>
+    <input type="number" class="form-control" id="start_hour" aria-describedby="">
+    </div>
+    <!-- end_hour -->
+    <div class="mb-3">
+    <label for="end_hour" class="form-label">end_hour</label>
+    <input type="number" class="form-control" id="end_hour" aria-describedby="">
+    </div>
+   
+
+    <!-- employees -->
+    <div class="mb-3">
+    <label for="employee" class="form-label">employee</label>
+    <input type="number" class="form-control" id="employee" aria-describedby="">
+    </div>
+   
+  
+  
+  <button type="button" class="btn btn-primary" onclick="addShift()">Create New Shift</button>
+</form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/shifts.js"></script>
+</body>
+</html>
